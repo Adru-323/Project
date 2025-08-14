@@ -106,9 +106,9 @@ async function main(){
 
 
 // The below code throws and unwnated error i dont know why
-// app.all("*",(req,res,next) => {
-//     next(new ExpressError(404,"Page not found"))
-// });
+app.all("*",(req,res,next) => {
+    next(new ExpressError(404,"Page not found"))
+});
 
 
 
