@@ -131,3 +131,27 @@ body{
   border-radius: 25px !important;
   padding: 0.5rem 3rem 0.5rem 3rem !important;
 }
+
+
+/* mobile view */
+@media (max-width: 768px) {
+  .navbar-collapse {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    padding: 1rem;
+    border-bottom: 1px solid #ddd;
+    z-index: 1000;
+  }
+
+  .navbar-nav .nav-link {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  .navbar-nav .nav-link:last-child {
+    border-bottom: none;
+  }
+}
