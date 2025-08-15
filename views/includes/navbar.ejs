@@ -6,26 +6,35 @@
       <i class="fa-regular fa-compass"></i>
     </a>
 
-    <!-- Search bar (always visible) -->
-        <form class="d-flex" method="GET" action="/listings/search">
-          <input
-            class="form-control me-2 search-inp"
-            name="query"
-            type="search"
-            placeholder="Search destinations"
-          />
-          <button class="btn btn-search" type="submit">
-            <i class="fa-solid fa-magnifying-glass"></i>&nbsp;Search
-          </button>
-        </form>
-
-    <!-- Toggle button -->
-    <button class="navbar-toggler order-md-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
+    <!-- Mobile Toggle -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <!-- Collapsible menu -->
-    <div class="collapse navbar-collapse order-md-3" id="navbarNavAltMarkup">
+    <!-- Desktop Search -->
+    <form class="d-none d-md-flex search-form mx-2" method="GET" action="/listings/search">
+      <input class="form-control search-inp" name="query" type="search" placeholder="Search destinations" />
+      <button class="btn btn-search" type="submit">
+        <i class="fa-solid fa-magnifying-glass"></i> Search
+      </button>
+    </form>
+
+    <!-- Collapsible Menu -->
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="d-md-none d-flex justify-content-between align-items-center mb-3">
+        <!-- Mobile Search -->
+        <form class="d-flex w-100 me-2" method="GET" action="/listings/search">
+          <input class="form-control search-inp" name="query" type="search" placeholder="Search destinations" />
+          <button class="btn btn-search" type="submit">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </form>
+        <!-- Close Button -->
+        <button class="btn btn-outline-secondary ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
       <ul class="navbar-nav ms-auto">
         <li class="nav-item"><a class="nav-link" href="/listings/new">Airbnb your home</a></li>
         <% if (!currUser) { %>
@@ -36,6 +45,7 @@
         <% } %>
       </ul>
     </div>
-    
+
   </div>
 </nav>
+  
