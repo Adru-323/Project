@@ -133,8 +133,8 @@ body{
 }
 
 
-/* mobile view */
-@media (max-width: 768px) {
+
+/* mobile view */@media (max-width: 768px) {
   .navbar-collapse {
     position: absolute;
     top: 100%;
@@ -154,4 +154,11 @@ body{
   .navbar-nav .nav-link:last-child {
     border-bottom: none;
   }
+
+  .search-inp {
+    border-radius: 20px;
+  }
+}
+.inline{
+    display: flex;
 }
